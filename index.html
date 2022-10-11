@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>contador da lary</title>
+  <style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        min-height: 100vh;
+        background-color: black;
+        color: green;
+        display:grid;
+        place-items:center;
+    }
+    section {
+        background: rgba(10, 82, 190, 0.2);
+        padding:20px;
+        border-radius:5px;
+        text-align:center;
+    }
+    p{
+        font-size:100px;
+    }
+  </style>
+</head>
+<body>
+    <section>
+        <h1>contador</h1>
+        <p id="resultado"></p>
+        <button onclick="diminuir()">menos</button>
+        <button onclick="aumentar()">mais</button>
+        <button onclick="zerar()">zerar</button>
+    </section>
+    <script>
+        // estado da minha aplição
+        let numero = 0
+        //alteradores de estado da aplicação
+         function aumentar() {
+            numero ++
+            mostrarnatela()
+         }
+         function diminuir() {
+            numero --
+            mostrarnatela()
+         }
+         function zerar() {
+            numero = 0
+            mostrarnatela()
+         }
+         //jogar o estado da aplicação na tela
+         function mostrarnatela() {
+            const p = document.querySelector("#resultado")
+            p.innerText = numero 
+         }
+          
+         //iniciar
+         mostrarnatela()
+    </script>
+ </body>
+
+</html>
